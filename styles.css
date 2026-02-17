@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+/* Header Styles */
+header{
+    background: linear-gradient(135deg, #20002c 0%, #cbb4d4 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px; 
+}
+header h1{
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+header p{
+    font-size: 1.2em;
+}
+/* Navigation Styles */
+nav{
+    background: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: all 0.3s;
+}
+nav a:hover{
+    background: #20002c;
+    border-radius: 5px;
+}
+/* sections Styles */
+section{
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+section h2{
+   color: #20002c;
+   font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #20002c;
+    padding-bottom: 10px;
+    
+}
+#about p{
+    font-weight: 500;
+    font-size: 1em;
+    color: #111;
+    background: #f5f5f5;
+    padding: 30px;
+    border-left: 5px solid #20002c;
+}
+/* Projects grid */
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card{
+    background: linear-gradient(135deg, #20002c 0%, #cbb4d4 100%);
+    padding: 25px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    color: white;
+}
+.project-card:hover{
+    transform: translateY(-5px);
+    border-color: #20002c;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Tech Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Skills Styles - FIXED CLASS NAME */
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+.skill-item{
+    background: linear-gradient(135deg, #20002c 0%, #cbb4d4 100%);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.skill-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+/* game section */
+#game {
+    background: linear-gradient(135deg, #20002c 0%, #cbb4d4 100%);
+    color: white;
+}
+#game h2 {
+    color: white;
+    border-bottom-color: white;
+}
+#gameCanvas {
+    display: block;
+    margin: 20px auto;
+    background: #000;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+.gameinfo {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.game-controls {
+   text-align: center;
+    margin-top: 20px;
+}
+button{
+    background: white;
+    color: #20002c;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 5px;
+    transition: all 0.3s;
+}
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/*contact section */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1.1em;
+}
+
+.contact-info p,
+.contact-info a {
+    margin: 0;
+}
+.contact-info a {
+    color: #20002c;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.contact-info a:hover {
+    color: #cbb4d4;
+}
+
+/* Contact Form Styles */
+#contactForm {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #20002c;
+}
+
+#contactForm button {
+    align-self: flex-start;
+}
+
+#formMessage {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+}
+
+#formMessage.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#formMessage.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Footer Styles */
+footer{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 { 
+        font-size: 2em; 
+    }
+    nav ul { 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+    section { 
+        padding: 20px; 
+        margin: 15px; 
+    }
+    .projects-grid { 
+        grid-template-columns: 1fr; 
+    }
+}
