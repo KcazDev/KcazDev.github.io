@@ -1,36 +1,45 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
 }
-/* Header Styles */
-header{
+
+/* =============================================
+   HEADER
+   ============================================= */
+
+header {
     background: linear-gradient(135deg, #20002c 0%, #cbb4d4 100%);
     color: white;
     text-align: center;
-    padding: 60px 20px; 
+    padding: 60px 20px;
 }
-header h1{
+header h1 {
     font-size: 3em;
     margin-bottom: 10px;
 }
-header p{
+header p {
     font-size: 1.2em;
 }
-/* Navigation Styles */
-nav{
+
+/* =============================================
+   NAVIGATION
+   ============================================= */
+
+nav {
     background: #333;
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
 }
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -43,12 +52,16 @@ nav a {
     padding: 8px 15px;
     transition: all 0.3s;
 }
-nav a:hover{
+nav a:hover {
     background: #20002c;
     border-radius: 5px;
 }
-/* sections Styles */
-section{
+
+/* =============================================
+   SECTIONS
+   ============================================= */
+
+section {
     max-width: 1200px;
     margin: 30px auto;
     padding: 40px;
@@ -56,16 +69,14 @@ section{
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
-section h2{
-   color: #20002c;
-   font-size: 2em;
+section h2 {
+    color: #20002c;
+    font-size: 2em;
     margin-bottom: 20px;
     border-bottom: 3px solid #20002c;
     padding-bottom: 10px;
-    
 }
-#about p{
+#about p {
     font-weight: 500;
     font-size: 1em;
     color: #111;
@@ -73,15 +84,18 @@ section h2{
     padding: 30px;
     border-left: 5px solid #20002c;
 }
-/* Projects grid */
-.projects-grid{
+
+/* =============================================
+   PROJECTS GRID
+   ============================================= */
+
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
-
-.project-card{
+.project-card {
     background: linear-gradient(135deg, #20002c 0%, #cbb4d4 100%);
     padding: 25px;
     border-radius: 10px;
@@ -89,20 +103,22 @@ section h2{
     border: 2px solid transparent;
     color: white;
 }
-.project-card:hover{
+.project-card:hover {
     transform: translateY(-5px);
     border-color: #20002c;
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
 }
 
-/* Tech Tags */
+/* =============================================
+   TECH TAGS
+   ============================================= */
+
 .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin: 15px 0;
 }
-
 .tech-tag {
     background: rgba(255, 255, 255, 0.2);
     padding: 5px 12px;
@@ -111,14 +127,17 @@ section h2{
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Skills Styles - FIXED CLASS NAME */
-.skills-list{
+/* =============================================
+   SKILLS
+   ============================================= */
+
+.skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 20px;
 }
-.skill-item{
+.skill-item {
     background: linear-gradient(135deg, #20002c 0%, #cbb4d4 100%);
     color: white;
     padding: 12px 25px;
@@ -130,7 +149,11 @@ section h2{
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
-/* game section */
+
+/* =============================================
+   GAME SECTION
+   ============================================= */
+
 #game {
     background: linear-gradient(135deg, #20002c 0%, #cbb4d4 100%);
     color: white;
@@ -153,10 +176,15 @@ section h2{
     font-weight: bold;
 }
 .game-controls {
-   text-align: center;
+    text-align: center;
     margin-top: 20px;
 }
-button{
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+
+button {
     background: white;
     color: #20002c;
     border: none;
@@ -168,19 +196,21 @@ button{
     margin: 5px;
     transition: all 0.3s;
 }
-button:hover{
+button:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
-/*contact section */
+/* =============================================
+   CONTACT
+   ============================================= */
+
 .contact-info {
     display: flex;
     flex-direction: column;
     gap: 8px;
     font-size: 1.1em;
 }
-
 .contact-info p,
 .contact-info a {
     margin: 0;
@@ -193,8 +223,6 @@ button:hover{
 .contact-info a:hover {
     color: #cbb4d4;
 }
-
-/* Contact Form Styles */
 #contactForm {
     margin-top: 30px;
     display: flex;
@@ -202,7 +230,6 @@ button:hover{
     gap: 15px;
     max-width: 600px;
 }
-
 #contactForm input,
 #contactForm textarea {
     padding: 12px 15px;
@@ -212,31 +239,26 @@ button:hover{
     font-family: Arial, sans-serif;
     transition: border-color 0.3s;
 }
-
 #contactForm input:focus,
 #contactForm textarea:focus {
     outline: none;
     border-color: #20002c;
 }
-
 #contactForm button {
     align-self: flex-start;
 }
-
 #formMessage {
     margin-top: 15px;
     padding: 15px;
     border-radius: 8px;
     display: none;
 }
-
 #formMessage.success {
     display: block;
     background: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
 }
-
 #formMessage.error {
     display: block;
     background: #f8d7da;
@@ -244,8 +266,11 @@ button:hover{
     border: 1px solid #f5c6cb;
 }
 
-/* Footer Styles */
-footer{
+/* =============================================
+   FOOTER
+   ============================================= */
+
+footer {
     background: #333;
     color: white;
     text-align: center;
@@ -253,20 +278,195 @@ footer{
     margin-top: 50px;
 }
 
-/* Responsive Design */
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
 @media (max-width: 768px) {
-    header h1 { 
-        font-size: 2em; 
+    header h1 {
+        font-size: 2em;
     }
-    nav ul { 
-        flex-direction: column; 
-        gap: 10px; 
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
-    section { 
-        padding: 20px; 
-        margin: 15px; 
+    section {
+        padding: 20px;
+        margin: 15px;
     }
-    .projects-grid { 
-        grid-template-columns: 1fr; 
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================
+   KNIGHTS ADVENTURE PAGE
+   ============================================= */
+
+.project-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 32px 80px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #20002c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: 32px;
+    transition: gap 0.2s, color 0.2s;
+}
+.back-link:hover {
+    gap: 12px;
+    color: #cbb4d4;
+}
+
+.project-hero {
+    background: linear-gradient(135deg, #20002c 0%, #cbb4d4 100%);
+    border-radius: 12px;
+    padding: 48px 44px;
+    color: white;
+    margin-bottom: 28px;
+}
+.project-hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+.project-hero p {
+    font-size: 1.05em;
+    opacity: 0.9;
+    max-width: 780px;
+    line-height: 1.7;
+}
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+.hero-tag {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.content-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    padding: 40px 44px;
+    margin-bottom: 28px;
+}
+.content-card h2 {
+    color: #20002c;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #20002c;
+}
+.content-card p + p {
+    margin-top: 14px;
+}
+
+.screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+.screenshot-gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #eee;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.screenshot-gallery img:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    height: 270px;
+}
+.screenshot-gallery img:hover {
+    transform: scale(1.02);
+    border-color: #20002c;
+    box-shadow: 0 8px 24px rgba(32,0,44,0.2);
+}
+.gallery-note {
+    text-align: center;
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 10px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #eee;
+    background: #000;
+}
+.video-wrapper video,
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+.lightbox.active {
+    display: flex;
+}
+.lightbox img {
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid rgba(203,180,212,0.5);
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.lightbox-close:hover {
+    opacity: 1;
+}
+
+@media (max-width: 640px) {
+    .project-page { padding: 0 16px 60px; }
+    .project-hero { padding: 32px 24px; }
+    .project-hero h1 { font-size: 2em; }
+    .content-card { padding: 24px 20px; }
+    .screenshot-gallery { grid-template-columns: 1fr; }
+    .screenshot-gallery img,
+    .screenshot-gallery img:last-child:nth-child(odd) {
+        grid-column: auto;
+        height: 180px;
     }
 }

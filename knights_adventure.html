@@ -5,26 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
-
-    <title>Document</title>
-
+    <title>Knights Adventure</title>
 </head>
 
 <body>
-    <h1> Knights Adventure </h1>
-    <p> Knights Adventure is a 2D platformer built in Unity using C#, where players take on the role of a brave knight
-        on a quest to reclaim the crown and restore the kingdom. Every asset in the game was designed and created from
-        scratch, making it a fully original experience from the ground up.
-        Key features include a dynamic parallax background that brings the world to life with a sense of depth and
+
+<div class="project-page">
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <div class="project-hero">
+        <h1>Knights Adventure</h1>
+        <p>A 2D platformer built in Unity using C#, where players take on the role of a brave knight on a quest to
+        reclaim the crown and restore the kingdom. Every asset was designed and created from scratch, making it a
+        fully original experience from the ground up.</p>
+        <div class="hero-tags">
+            <span class="hero-tag">Unity</span>
+            <span class="hero-tag">C#</span>
+            <span class="hero-tag">2D Platformer</span>
+            <span class="hero-tag">Game Design</span>
+            <span class="hero-tag">Original Assets</span>
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h2>About the Project</h2>
+        <p>Key features include a dynamic parallax background that brings the world to life with a sense of depth and
         movement, fluid character animations that react to the player's actions, and a fully programmed jumping mechanic
-        and death sequence that give the game a polished, responsive feel.
-        This project holds a special place as my very first complete game — and the one that sparked my passion for
+        and death sequence that give the game a polished, responsive feel.</p>
+        <p>This project holds a special place as my very first complete game — and the one that sparked my passion for
         programming. Through countless late nights of debugging and problem-solving, I gained hands-on experience with
         Unity's 2D engine, animation systems, game physics, and core gameplay programming. Finishing Knights Adventure
         taught me more than any tutorial could, and crossing that finish line gave me a deep sense of accomplishment
         that pushed me to keep building.</p>
-    <br>
+    </div>
+
+    <div class="content-card">
+        <h2>Screenshots</h2>
+        <div class="screenshot-gallery">
+            <img src="assets/coin_collection_script.png" alt="Coin Collection Script">
+            <img src="assets/detect_collison_script.png" alt="Detect Collision Script">
+            <img src="assets/Paralax_Script.png" alt="Parallax Script">
+            <img src="assets/player_movement_script.png" alt="Player Movement Script">
+        </div>
+        <p class="gallery-note">Click any image to expand</p>
+    </div>
+
+    <div class="content-card">
+        <h2>Gameplay</h2>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="assets/knights_adventure.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">✕</span>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+    const imgs = document.querySelectorAll('.screenshot-gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+        });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+</script>
 
 </body>
-
 </html>
