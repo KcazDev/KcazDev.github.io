@@ -85,6 +85,130 @@
     document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
     lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
 </script>
+<!-- GLITCH CURSOR + GLITCH SHATTER -->
+<div id="cursor-r"></div>
+<div id="cursor-g"></div>
+<div id="cursor-b"></div>
+<div id="cursor-dot"></div>
+
+<style>
+* { cursor: none !important; }
+
+#cursor-dot,
+#cursor-r, #cursor-g, #cursor-b {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s;
+    opacity: 0;
+}
+
+#cursor-dot {
+    background: #fff;
+    width: 8px;
+    height: 8px;
+    z-index: 100000;
+    mix-blend-mode: difference;
+}
+#cursor-r { background: #ff3cac; mix-blend-mode: screen; }
+#cursor-g { background: #00f0ff; mix-blend-mode: screen; }
+#cursor-b { background: #7b2fff; mix-blend-mode: screen; }
+
+body:hover #cursor-dot,
+body:hover #cursor-r,
+body:hover #cursor-g,
+body:hover #cursor-b { opacity: 1; }
+
+/* shatter fragment */
+.shatter {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    pointer-events: none;
+    z-index: 99998;
+    border-radius: 1px;
+    transform: translate(-50%, -50%);
+    animation: shatter 0.6s ease-out forwards;
+}
+@keyframes shatter {
+    0%   { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.2) rotate(var(--rot)); }
+}
+</style>
+
+<script>
+const dot  = document.getElementById('cursor-dot');
+const cr   = document.getElementById('cursor-r');
+const cg   = document.getElementById('cursor-g');
+const cb   = document.getElementById('cursor-b');
+
+let mx = 0, my = 0;
+let dx = 0, dy = 0;
+let glitching = false;
+
+document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+});
+
+function rand(min, max) { return Math.random() * (max - min) + min; }
+
+function glitchOffset() {
+    if (Math.random() < 0.15) {
+        glitching = true;
+        const ox = rand(-18, 18);
+        const oy = rand(-6, 6);
+        cr.style.left = (mx + ox) + 'px';
+        cr.style.top  = (my + oy) + 'px';
+        cg.style.left = (mx - ox * 0.5) + 'px';
+        cg.style.top  = (my + oy * 0.3) + 'px';
+        cb.style.left = (mx + rand(-8, 8)) + 'px';
+        cb.style.top  = (my + rand(-4, 4)) + 'px';
+        setTimeout(() => { glitching = false; }, 80);
+    } else if (!glitching) {
+        cr.style.left = mx + 'px'; cr.style.top = my + 'px';
+        cg.style.left = mx + 'px'; cg.style.top = my + 'px';
+        cb.style.left = mx + 'px'; cb.style.top = my + 'px';
+    }
+}
+
+// Smooth dot follow
+function animate() {
+    dx += (mx - dx) * 0.18;
+    dy += (my - dy) * 0.18;
+    dot.style.left = dx + 'px';
+    dot.style.top  = dy + 'px';
+    glitchOffset();
+    requestAnimationFrame(animate);
+}
+animate();
+
+// Glitch shatter on click
+const colors = ['#ff3cac', '#00f0ff', '#7b2fff', '#ffe94a', '#ffffff'];
+document.addEventListener('click', e => {
+    const count = 14;
+    for (let i = 0; i < count; i++) {
+        const frag = document.createElement('div');
+        frag.className = 'shatter';
+        frag.style.left = e.clientX + 'px';
+        frag.style.top  = e.clientY + 'px';
+        frag.style.background = colors[Math.floor(Math.random() * colors.length)];
+        const angle = rand(0, 360);
+        const dist  = rand(30, 90);
+        frag.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+        frag.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+        frag.style.setProperty('--rot', rand(-180, 180) + 'deg');
+        frag.style.width  = rand(4, 10) + 'px';
+        frag.style.height = rand(4, 10) + 'px';
+        document.body.appendChild(frag);
+        frag.addEventListener('animationend', () => frag.remove());
+    }
+});
+</script>
 
 </body>
 </html>

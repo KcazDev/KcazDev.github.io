@@ -1,160 +1,457 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Zackery Lake Dev</title>
+    <title>Zackery Lake — Developer & Designer</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <header>
-        <h1>Zackery Lake Portfolio</h1>
-        <p>GIMM Major | Cybersecurity Minor | Boise State University</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#game">Web Game</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm Zackery Lake a developer at Boise State University majoring in GIMM. I specialize in Unity (C#), Unreal
-            Engine (C++/Blueprints), and full stack development with HTML, JavaScript, and Node.js. Over the last two
-            years, I've built projects that reflect not just my technical ability, but my drive to constantly improve.
-            I've always believed in the power of creating something incredible from nothing. Games shaped my childhood,
-            but instead of stopping at playing them, I wanted to understand how they were built. That mindset pushed me
-            into development and continues to fuel my work today.
-            As I've advanced in my studies, I've realized that interactive technology has the potential to transform
-            entire industries. My goal is to use my skills to help push the world forward whether that's through games,
-            tools, or systems that redefine how people interact with technology.</p>
-    </section>
+<!-- HEADER -->
+<header>
+    <span class="header-label">// hello world</span>
+    <h1>Zackery<br><span class="highlight">Lake.</span></h1>
+    <p class="subtitle">GIMM Major · Cybersecurity Minor · Boise State University</p>
+    <div class="header-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="scroll-hint">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</header>
 
-    <section id="projects">
-        <h2>Projects</h2>
+<!-- NAV -->
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#game">Game</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="inner">
+        <div class="about-stat-grid reveal">
+            <div class="stat-box">
+                <div class="stat-num">2+</div>
+                <div class="stat-label">Years Building</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">6+</div>
+                <div class="stat-label">Projects Shipped</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">3</div>
+                <div class="stat-label">Engines Mastered</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">∞</div>
+                <div class="stat-label">Late Night Bugs Fixed</div>
+            </div>
+        </div>
+        <div class="about-text reveal">
+            <span class="section-label">// about me</span>
+            <h2 class="section-title">Who I Am</h2>
+            <p>I'm Zackery Lake — a developer at Boise State University majoring in GIMM. I specialize in Unity (C#), Unreal Engine (C++/Blueprints), and full-stack development with HTML, JavaScript, and Node.js.</p>
+            <p>Games shaped my childhood, but instead of stopping at playing them, I wanted to understand how they were built. That mindset pushed me into development and continues to fuel my work today. My goal is to use my skills to push the world forward — whether through games, tools, or systems that redefine how people interact with technology.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="inner">
+        <span class="section-label">// my work</span>
+        <h2 class="section-title reveal">Projects</h2>
         <div class="projects-grid">
 
-            <div class="project-card">
+            <div class="project-card reveal">
+                <span class="card-icon">⚔️</span>
                 <h3>Knights Adventure</h3>
-                <p>An action-adventure game built in Unity featuring combat mechanics and level progression.</p>
-
+                <p>A 2D action-platformer built in Unity. Dynamic parallax backgrounds, fluid animations, and custom combat mechanics — all assets original.</p>
                 <div class="tags">
                     <span class="tech-tag">Unity</span>
                     <span class="tech-tag">C#</span>
+                    <span class="tech-tag">2D Platformer</span>
                 </div>
-
-                <button onclick="location.href='knights_adventure.html'">View Project</button>
+                <button onclick="location.href='knights_adventure.html'">View Project →</button>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal">
+                <span class="card-icon">🏴‍☠️</span>
                 <h3>Pirate Frenzy</h3>
-                <p>AR Mobile Game - An augmented reality pirate-themed mobile experience.</p>
-
+                <p>An augmented reality mobile experience where pirates invade the real world. Built with AR Foundations for cross-platform support.</p>
                 <div class="tags">
                     <span class="tech-tag">Unity</span>
                     <span class="tech-tag">C#</span>
                     <span class="tech-tag">AR Foundations</span>
                 </div>
-
-                <button onclick="alert('Project page coming soon!')">View Project</button>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal">
+                <span class="card-icon">⚛️</span>
                 <h3>Quantum Circus</h3>
-                <p>A physics-based puzzle game with unique quantum mechanics gameplay.</p>
-
+                <p>A physics-based puzzle game where quantum mechanics become gameplay. Superposition, entanglement, and paradoxes as core mechanics.</p>
                 <div class="tags">
                     <span class="tech-tag">Unity</span>
                     <span class="tech-tag">C#</span>
+                    <span class="tech-tag">Physics</span>
                 </div>
-
-                <button onclick="alert('Project page coming soon!')">View Project</button>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal">
+                <span class="card-icon">🌍</span>
                 <h3>Unreal 3D Environment</h3>
-                <p>A detailed 3D environment showcasing lighting, materials, and level design.</p>
-
+                <p>A cinematic 3D environment showcasing advanced lighting, PBR materials, and atmospheric level design built entirely in Unreal Engine.</p>
                 <div class="tags">
                     <span class="tech-tag">Unreal</span>
                     <span class="tech-tag">Blueprints</span>
+                    <span class="tech-tag">Level Design</span>
                 </div>
-
-                <button onclick="alert('Project page coming soon!')">View Project</button>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal">
+                <span class="card-icon">🤖</span>
                 <h3>Contractor AI Website</h3>
-                <p>Full-stack web application for contractor management and AI recommendations.</p>
-
+                <p>Full-stack web application for contractor management powered by AI recommendations. Built with a Node.js backend and dynamic frontend.</p>
                 <div class="tags">
                     <span class="tech-tag">HTML</span>
                     <span class="tech-tag">CSS</span>
                     <span class="tech-tag">JavaScript</span>
                     <span class="tech-tag">Node.js</span>
                 </div>
-
-                <button onclick="alert('Project page coming soon!')">View Project</button>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal">
+                <span class="card-icon">🎨</span>
                 <h3>Original Artwork</h3>
-                <p>Digital art and animations created using industry standard tools.</p>
+                <p>Digital art and animations created with industry-standard tools. From concept to final render — motion graphics, illustrations, and more.</p>
                 <div class="tags">
                     <span class="tech-tag">Photoshop</span>
                     <span class="tech-tag">Adobe Animate</span>
                 </div>
-                <button onclick="alert('Project page coming soon!')">View Project</button>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
 
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="game">
-        <h2>Interactive Web Game</h2>
-        <p>Game coming soon! I'm currently building a playable browser based game using JavaScript and HTML Canvas.</p>
-    </section>
+<!-- SKILLS -->
+<section id="skills">
+    <div class="inner">
+        <span class="section-label">// tools & tech</span>
+        <h2 class="section-title reveal">Skills</h2>
+        <div class="skills-categories">
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        
-        <!-- Contact Info -->
-        <div class="contact-info">
-            <p><strong>Email:</strong> Kcaz.dev@gmail.com</p>
-            <p><strong>Phone:</strong> (971) 286-1394</p>
-            <a href="https://www.linkedin.com/in/zackery-lake-b3a41825a/" target="_blank">
-                LinkedIn Profile
-            </a>
+            <div class="skill-category reveal">
+                <div class="skill-category-title">
+                    <span class="dot"></span>
+                    Game Development
+                </div>
+                <div class="skill-bar-list">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>Unity (C#)</span><span>90%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>Unreal Engine</span><span>75%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>Blueprints</span><span>70%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>AR Foundations</span><span>65%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category reveal">
+                <div class="skill-category-title">
+                    <span class="dot"></span>
+                    Web Development
+                </div>
+                <div class="skill-bar-list">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>HTML / CSS</span><span>90%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>JavaScript</span><span>80%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>Node.js</span><span>70%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category reveal">
+                <div class="skill-category-title">
+                    <span class="dot"></span>
+                    Creative Tools
+                </div>
+                <div class="skill-bar-list">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>Photoshop</span><span>80%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>Adobe Animate</span><span>75%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>Game Design</span><span>85%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category reveal">
+                <div class="skill-category-title">
+                    <span class="dot"></span>
+                    Other
+                </div>
+                <div class="skill-bar-list">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>C#</span><span>85%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>C++ / Unreal</span><span>65%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-label"><span>Cybersecurity</span><span>60%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        
-        <!-- Contact Form -->
-        <form id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        
-        <div id="formMessage"></div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2026 Zackery Lake. All rights reserved.</p>
-    </footer>
+<!-- GAME -->
+<section id="game">
+    <div class="inner">
+        <span class="section-label">// play</span>
+        <h2 class="section-title reveal">Web Game</h2>
+        <div class="game-coming-soon reveal">
+            <span class="big-icon">🕹️</span>
+            <p>A playable browser game is in development — built with vanilla JavaScript and HTML Canvas. Check back soon!</p>
+        </div>
+    </div>
+</section>
 
-    <script src="script.js" defer></script>
+<!-- CONTACT -->
+<section id="contact">
+    <div class="inner">
+        <div class="contact-info reveal">
+            <span class="section-label">// reach out</span>
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info-item">
+                <span class="label">Email</span>
+                <a href="mailto:Kcaz.dev@gmail.com">Kcaz.dev@gmail.com</a>
+            </div>
+            <div class="contact-info-item">
+                <span class="label">Phone</span>
+                <span>(971) 286-1394</span>
+            </div>
+            <div class="contact-info-item">
+                <span class="label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/zackery-lake-b3a41825a/" target="_blank">zackery-lake →</a>
+            </div>
+        </div>
+        <div class="reveal">
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="formMessage"></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Zackery Lake. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/zackery-lake-b3a41825a/" target="_blank">LinkedIn</a>
+        <a href="mailto:Kcaz.dev@gmail.com">Email</a>
+    </div>
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+        if (el.isIntersecting) {
+            el.target.classList.add('visible');
+            // Animate skill bars when visible
+            el.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+                bar.style.width = bar.dataset.width + '%';
+            });
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Also trigger skill bars if already in view on load
+document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+    const rect = bar.getBoundingClientRect();
+    if (rect.top < window.innerHeight) bar.style.width = bar.dataset.width + '%';
+});
+
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const msg = document.getElementById('formMessage');
+    msg.className = 'success';
+    msg.textContent = '✓ Message sent! I\'ll get back to you soon.';
+    this.reset();
+});
+</script>
+<!-- CURSOR ORB -->
+<!-- GLITCH CURSOR + GLITCH SHATTER -->
+<div id="cursor-r"></div>
+<div id="cursor-g"></div>
+<div id="cursor-b"></div>
+<div id="cursor-dot"></div>
+
+<style>
+* { cursor: none !important; }
+
+#cursor-dot,
+#cursor-r, #cursor-g, #cursor-b {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s;
+    opacity: 0;
+}
+
+#cursor-dot {
+    background: #fff;
+    width: 8px;
+    height: 8px;
+    z-index: 100000;
+    mix-blend-mode: difference;
+}
+#cursor-r { background: #ff3cac; mix-blend-mode: screen; }
+#cursor-g { background: #00f0ff; mix-blend-mode: screen; }
+#cursor-b { background: #7b2fff; mix-blend-mode: screen; }
+
+body:hover #cursor-dot,
+body:hover #cursor-r,
+body:hover #cursor-g,
+body:hover #cursor-b { opacity: 1; }
+
+/* shatter fragment */
+.shatter {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    pointer-events: none;
+    z-index: 99998;
+    border-radius: 1px;
+    transform: translate(-50%, -50%);
+    animation: shatter 0.6s ease-out forwards;
+}
+@keyframes shatter {
+    0%   { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.2) rotate(var(--rot)); }
+}
+</style>
+
+<script>
+const dot  = document.getElementById('cursor-dot');
+const cr   = document.getElementById('cursor-r');
+const cg   = document.getElementById('cursor-g');
+const cb   = document.getElementById('cursor-b');
+
+let mx = 0, my = 0;
+let dx = 0, dy = 0;
+let glitching = false;
+
+document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+});
+
+function rand(min, max) { return Math.random() * (max - min) + min; }
+
+function glitchOffset() {
+    if (Math.random() < 0.15) {
+        glitching = true;
+        const ox = rand(-18, 18);
+        const oy = rand(-6, 6);
+        cr.style.left = (mx + ox) + 'px';
+        cr.style.top  = (my + oy) + 'px';
+        cg.style.left = (mx - ox * 0.5) + 'px';
+        cg.style.top  = (my + oy * 0.3) + 'px';
+        cb.style.left = (mx + rand(-8, 8)) + 'px';
+        cb.style.top  = (my + rand(-4, 4)) + 'px';
+        setTimeout(() => { glitching = false; }, 80);
+    } else if (!glitching) {
+        cr.style.left = mx + 'px'; cr.style.top = my + 'px';
+        cg.style.left = mx + 'px'; cg.style.top = my + 'px';
+        cb.style.left = mx + 'px'; cb.style.top = my + 'px';
+    }
+}
+
+// Smooth dot follow
+function animate() {
+    dx += (mx - dx) * 0.18;
+    dy += (my - dy) * 0.18;
+    dot.style.left = dx + 'px';
+    dot.style.top  = dy + 'px';
+    glitchOffset();
+    requestAnimationFrame(animate);
+}
+animate();
+
+// Glitch shatter on click
+const colors = ['#ff3cac', '#00f0ff', '#7b2fff', '#ffe94a', '#ffffff'];
+document.addEventListener('click', e => {
+    const count = 14;
+    for (let i = 0; i < count; i++) {
+        const frag = document.createElement('div');
+        frag.className = 'shatter';
+        frag.style.left = e.clientX + 'px';
+        frag.style.top  = e.clientY + 'px';
+        frag.style.background = colors[Math.floor(Math.random() * colors.length)];
+        const angle = rand(0, 360);
+        const dist  = rand(30, 90);
+        frag.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+        frag.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+        frag.style.setProperty('--rot', rand(-180, 180) + 'deg');
+        frag.style.width  = rand(4, 10) + 'px';
+        frag.style.height = rand(4, 10) + 'px';
+        document.body.appendChild(frag);
+        frag.addEventListener('animationend', () => frag.remove());
+    }
+});
+</script>
+
 </body>
-
 </html>
