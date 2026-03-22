@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor AI Website — Zackery Lake</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="project-page">
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <div class="project-hero">
+        <h1>Contractor AI Website</h1>
+        <p>A full-stack construction estimator web app that uses AI to generate cost estimates based on project
+        dimensions and materials. Users input their project specs — length, width, height, material type, and load
+        type — and the app validates the data and produces an AI-powered cost breakdown. Built with HTML, CSS,
+        JavaScript, Bootstrap, and a Node.js backend.</p>
+        <div class="hero-tags">
+            <span class="hero-tag">HTML</span>
+            <span class="hero-tag">CSS</span>
+            <span class="hero-tag">JavaScript</span>
+            <span class="hero-tag">Node.js</span>
+            <span class="hero-tag">Bootstrap</span>
+            <span class="hero-tag">AI Integration</span>
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h2>About the Project</h2>
+        <p>This project was built as a practical full-stack application that solves a real problem — getting quick,
+        accurate construction cost estimates. The user fills out a project input form with dimensions (length, width,
+        height), material type (wood, steel, or concrete), load type (static or dynamic), and cost per unit. The app
+        validates every field with detailed error messages before passing the data to the AI to generate an estimate.</p>
+        <p>The form includes robust client-side validation — every field is checked for missing values, negative
+        numbers, and unrealistic inputs like a 1000ft wall. If anything fails, an error banner lists every issue and
+        the form stops submission until they're fixed. Once validated, the data is passed via sessionStorage to a
+        results page where the AI-generated estimate is displayed.</p>
+    </div>
+
+    <div class="content-card">
+        <h2>Technical Details</h2>
+        <p>The frontend was built with Bootstrap 5 for responsive layout and form components, with custom CSS layered
+        on top for styling. JavaScript handles all form validation, error state management, and sessionStorage for
+        passing data between pages without a page reload. The backend uses Node.js to handle the AI API calls and
+        return the generated estimates to the client.</p>
+        <p>Key features include real-time field validation that clears errors as the user types, a scrolling error
+        banner that summarises all issues at once, a loading screen while the estimate generates, and a clean results
+        page displaying the full cost breakdown.</p>
+    </div>
+
+    <div class="content-card">
+        <h2>Screenshots</h2>
+        <div class="screenshot-gallery">
+            <img src="assets/contractor_landing_page.png" alt="Landing Page">
+            <img src="assets/contractor_loadingscreen.png" alt="Loading Screen">
+            <img src="assets/contractor_info.png" alt="Project Input Form">
+            <img src="assets/contractor_results.png" alt="Results Page">
+        </div>
+        <p class="gallery-note">Click any image to expand</p>
+    </div>
+
+    <div class="content-card">
+        <h2>Demo</h2>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="assets/contractor_results.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">✕</span>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+    const imgs = document.querySelectorAll('.screenshot-gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+        });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+</script>
+
+</body>
+</html>
