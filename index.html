@@ -355,7 +355,7 @@
     </footer>
 
     <script>
-        // animate skill bars when they scroll into view
+
         const bars = document.querySelectorAll('.bar-fill');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -367,7 +367,6 @@
 
         bars.forEach(bar => observer.observe(bar));
 
-        // contact form submit
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const msg = document.getElementById('formMessage');
@@ -376,11 +375,19 @@
             this.reset();
         });
     </script>
-    <!--Improvement 1: Added defer to the Bootstrap JS script tag to eliminate render-blocking behavior. WebPageTest identified 3 render-blocking requests. After adding defer, the browser no longer waits for Bootstrap JS to load before rendering the page.
+   
+   
+   
+   
+   
+   <!--Improvement 1: Added defer to the Bootstrap JS script tag to eliminate render-blocking behavior. WebPageTest identified 3 render-blocking requests. After adding defer, the browser no longer waits for Bootstrap JS to load before rendering the page.
 
 
 Improvement 2: Added <label> elements to all contact form inputs to fix a serious accessibility issue flagged by WebPageTest. Labels allow screen readers to identify form fields correctly.
 -->
+
+
+
 
 </body>
 
