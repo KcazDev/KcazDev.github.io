@@ -12,6 +12,8 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom, #0d0d0d, #12001f);
+    background-attachment: fixed;
+    min-height: 100vh;
     color: #e8e8e8;
     line-height: 1.6;
 }
@@ -29,8 +31,7 @@ header {
     flex-direction: column;
     justify-content: center;
     padding: 60px 8%;
-   background: linear-gradient(to bottom, #0d0d0d, #12001f);
-
+    background: linear-gradient(to bottom, #0d0d0d, #12001f);
 }
 header h1 {
     font-size: 3.5em;
@@ -159,7 +160,7 @@ section h2 {
 }
 
 #about {
-    background: #111;
+    background: rgba(17, 17, 17, 0.95);
 }
 
 .about-grid {
@@ -276,7 +277,7 @@ section h2 {
 }
 
 #skills {
-    background: #111;
+    background: rgba(17, 17, 17, 0.95);
 }
 .skills-grid {
     display: grid;
@@ -327,7 +328,7 @@ section h2 {
     transition: width 1s ease;
 }
 #game {
-    background: #0d0d0d;
+    background: transparent;
     text-align: center;
 }
 .game-placeholder {
@@ -349,7 +350,7 @@ section h2 {
 }
 
 #contact {
-background: linear-gradient(to bottom, #0d0d0d, #12001f);
+    background: transparent;
 }
 
 .contact-layout {
