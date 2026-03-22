@@ -209,11 +209,6 @@ section h2 {
 #projects {
     background: #0d0d0d;
 }
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
 
 .project-card {
     background: var(--card);
@@ -641,9 +636,4 @@ footer p {
         height: 180px;
     }
     footer { flex-direction: column; align-items: flex-start; }
-}
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
 }
