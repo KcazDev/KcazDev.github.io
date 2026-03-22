@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original Artwork — Zackery Lake</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <!-- My styles -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="project-page">
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <div class="project-hero">
+        <h1>Original Artwork</h1>
+        <p>A collection of original digital art created using Photoshop and Adobe Animate. From character design
+        to concept sketches, each piece reflects a different aspect of my creative process. More work will be
+        added here as projects continue.</p>
+        <div class="hero-tags">
+            <span class="hero-tag">Photoshop</span>
+            <span class="hero-tag">Adobe Animate</span>
+            <span class="hero-tag">Character Design</span>
+            <span class="hero-tag">Digital Art</span>
+            <span class="hero-tag">Concept Art</span>
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h2>Chibi Curator</h2>
+        <p>Original character design created for the Quantum Circus project. The Chibi Curator serves as the
+        guide character who leads the audience through the interactive comic, explaining quantum mechanics
+        concepts through the circus theme. Designed entirely from scratch in Photoshop to feel approachable,
+        playful, and fitting to the world of Quantum Circus.</p>
+        <div class="screenshot-gallery" style="margin-top: 20px;">
+            <img src="assets/Chibi Curator.png" alt="Chibi Curator Character Art">
+        </div>
+        <p class="gallery-note">Click to expand</p>
+    </div>
+
+    <div class="content-card">
+        <h2>Skeleton Drawing</h2>
+        <p>An original digital illustration created in Photoshop. This piece was part of developing my
+        foundational art skills, focusing on anatomy, linework, and shading techniques in a digital medium.</p>
+        <div class="screenshot-gallery" style="margin-top: 20px;">
+            <img src="assets/skeleton drawing.png" alt="Skeleton Drawing">
+        </div>
+        <p class="gallery-note">Click to expand</p>
+    </div>
+
+    <div class="content-card">
+        <h2>More Coming Soon</h2>
+        <p>This gallery will continue to grow as more projects are completed. Check back for additional character
+        designs, animations, and concept art.</p>
+    </div>
+
+</div>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">✕</span>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+    const imgs = document.querySelectorAll('.screenshot-gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+        });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+</script>
+
+</body>
+</html>
