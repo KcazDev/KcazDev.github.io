@@ -349,7 +349,7 @@ section h2 {
 }
 
 #contact {
-    background: #111;
+background: linear-gradient(to bottom, #0d0d0d, #12001f);
 }
 
 .contact-layout {
