@@ -11,7 +11,7 @@ html {
 }
 body {
     font-family: 'Inter', sans-serif;
-    background: #12002e;
+    background: linear-gradient(to bottom, #0d0d0d, #12001f);
     color: #e8e8e8;
     line-height: 1.6;
 }
