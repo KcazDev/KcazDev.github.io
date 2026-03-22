@@ -67,28 +67,6 @@
 
 </div>
 
-<!-- lightbox -->
-<div class="lightbox" id="lightbox">
-    <span class="lightbox-close" id="lightboxClose">✕</span>
-    <img id="lightboxImg" src="" alt="">
-</div>
-
-<script>
-    const imgs = document.querySelectorAll('.screenshot-gallery img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-
-    imgs.forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
-        });
-    });
-
-    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
-</script>
 
 </body>
 </html>
