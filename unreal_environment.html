@@ -66,6 +66,10 @@
     </div>
 
 </div>
+<script>
+    const vid = document.querySelector('video');
+vid.ontimeupdate = () => { if (vid.currentTime > 34) vid.pause(); };
+</script>
 
 
 </body>
