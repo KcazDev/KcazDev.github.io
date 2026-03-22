@@ -207,7 +207,7 @@ section h2 {
     color: var(--muted);
 }
 #projects {
-    background: #0d0d0d;
+    background: linear-gradient(to bottom, #0d0d0d, #12001f);
 }
 
 .project-card {
