@@ -13,14 +13,14 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #0d0d0d;
+    background: #12002e;
     color: #e8e8e8;
     line-height: 1.6;
 }
 
 /* ---- colors ---- */
 :root {
-    --pink: #ff3cac;
+    --pink: #4c00ff;
     --cyan: #00e5ff;
     --dark: #0d0d0d;
     --card: #1a1a1a;
@@ -35,7 +35,8 @@ header {
     flex-direction: column;
     justify-content: center;
     padding: 60px 8%;
-    background: #0d0d0d;
+   background: linear-gradient(to bottom, #0d0d0d, #12001f);
+
 }
 
 header h1 {
@@ -91,6 +92,32 @@ header p.subtitle {
 .btn-ghost:hover {
     border-color: var(--cyan);
     color: var(--cyan);
+}
+.scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72em;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--muted), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
 }
 
 /* ---- nav ---- */
