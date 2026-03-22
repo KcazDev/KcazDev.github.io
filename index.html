@@ -4,15 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Zackery Lake — Portfolio</title>
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- My styles -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" ... defer></script>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- header -->
+
 <header>
     <h1>Zackery <span>Lake</span></h1>
     <p class="subtitle">GIMM Major · Cybersecurity Minor · Boise State University</p>
@@ -26,7 +24,7 @@
     </div>
 </header>
 
-<!-- nav -->
+
 <nav>
     <ul>
         <li><a href="#about">About</a></li>
@@ -37,13 +35,13 @@
     </ul>
 </nav>
 
-<!-- about -->
+
 <section id="about">
     <span class="section-sub">About Me</span>
     <h2>Who I Am</h2>
     <div class="divider"></div>
-    <div class="about-grid">
-        <div>
+    <div class="row align-items-center">
+        <div class="col-md-4">
             <img src="assets/me.PNG.webp" alt="Zackery Lake" class="profile-photo" />
             <div class="stats">
                 <div class="stat">
@@ -56,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="about-text">
+        <div class="col-md-8 about-text">
             <p>I'm Zackery Lake — a developer at Boise State University majoring in GIMM. I specialize in Unity (C#), Unreal Engine (C++/Blueprints), and full-stack development with HTML, JavaScript, MySQL and Node.js. I also have a strong background in digital art and game design, using tools like Photoshop and Adobe Animate to create original assets and animations.</p>
             <p>Games shaped my childhood, but instead of stopping at playing them, I wanted to understand how they were built. That mindset pushed me into development and continues to fuel my work today.</p>
             <p>My goal is to use my skills to push the world forward — whether through games, tools, or systems that redefine how people interact with technology.</p>
@@ -64,179 +62,199 @@
     </div>
 </section>
 
-<!-- projects -->
+
 <section id="projects">
     <span class="section-sub">My Work</span>
     <h2>Projects</h2>
     <div class="divider"></div>
-    <div class="projects-grid">
+    <div class="row g-3">
 
-        <div class="project-card">
-            <span class="card-icon">⚔️</span>
-            <h3>Knights Adventure</h3>
-            <p>A 2D action-platformer built in Unity with parallax backgrounds, fluid animations, and original assets.</p>
-            <div class="tags">
-                <span class="tag">Unity</span>
-                <span class="tag">C#</span>
-                <span class="tag">2D Platformer</span>
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+                <span class="card-icon">⚔️</span>
+                <h3>Knights Adventure</h3>
+                <p>A 2D action-platformer built in Unity with parallax backgrounds, fluid animations, and original assets.</p>
+                <div class="tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">2D Platformer</span>
+                </div>
+                <button onclick="location.href='knights_adventure.html'">View Project →</button>
             </div>
-            <button onclick="location.href='knights_adventure.html'">View Project →</button>
         </div>
 
-        <div class="project-card">
-            <span class="card-icon">🏴‍☠️</span>
-            <h3>Pirate Frenzy</h3>
-            <p>An augmented reality mobile game where pirates invade the real world, built with AR Foundations.</p>
-            <div class="tags">
-                <span class="tag">Unity</span>
-                <span class="tag">C#</span>
-                <span class="tag">AR Foundations</span>
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+                <span class="card-icon">🏴‍☠️</span>
+                <h3>Pirate Frenzy</h3>
+                <p>An augmented reality mobile game where pirates invade the real world, built with AR Foundations.</p>
+                <div class="tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">AR Foundations</span>
+                </div>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
-            <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
         </div>
 
-        <div class="project-card">
-            <span class="card-icon">⚛️</span>
-            <h3>Quantum Circus</h3>
-            <p>A physics puzzle game where quantum mechanics like superposition and entanglement are core gameplay.</p>
-            <div class="tags">
-                <span class="tag">Unity</span>
-                <span class="tag">C#</span>
-                <span class="tag">Physics</span>
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+                <span class="card-icon">⚛️</span>
+                <h3>Quantum Circus</h3>
+                <p>A physics puzzle game where quantum mechanics like superposition and entanglement are core gameplay.</p>
+                <div class="tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Physics</span>
+                </div>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
-            <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
         </div>
 
-        <div class="project-card">
-            <span class="card-icon">🌍</span>
-            <h3>Unreal 3D Environment</h3>
-            <p>A cinematic 3D environment with advanced lighting, PBR materials, and level design in Unreal Engine.</p>
-            <div class="tags">
-                <span class="tag">Unreal</span>
-                <span class="tag">Blueprints</span>
-                <span class="tag">Level Design</span>
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+                <span class="card-icon">🌍</span>
+                <h3>Unreal 3D Environment</h3>
+                <p>A cinematic 3D environment with advanced lighting, PBR materials, and level design in Unreal Engine.</p>
+                <div class="tags">
+                    <span class="tag">Unreal</span>
+                    <span class="tag">Blueprints</span>
+                    <span class="tag">Level Design</span>
+                </div>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
-            <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
         </div>
 
-        <div class="project-card">
-            <span class="card-icon">🤖</span>
-            <h3>Contractor AI Website</h3>
-            <p>A full-stack web app for contractor management with AI-powered recommendations and a Node.js backend.</p>
-            <div class="tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Node.js</span>
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+                <span class="card-icon">🤖</span>
+                <h3>Contractor AI Website</h3>
+                <p>A full-stack web app for contractor management with AI-powered recommendations and a Node.js backend.</p>
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Node.js</span>
+                </div>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
-            <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
         </div>
 
-        <div class="project-card">
-            <span class="card-icon">🎨</span>
-            <h3>Original Artwork</h3>
-            <p>Digital art and animations made with Photoshop and Adobe Animate — from concept sketches to final renders.</p>
-            <div class="tags">
-                <span class="tag">Photoshop</span>
-                <span class="tag">Adobe Animate</span>
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+                <span class="card-icon">🎨</span>
+                <h3>Original Artwork</h3>
+                <p>Digital art and animations made with Photoshop and Adobe Animate — from concept sketches to final renders.</p>
+                <div class="tags">
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Adobe Animate</span>
+                </div>
+                <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
             </div>
-            <button onclick="alert('Project page coming soon!')">Coming Soon →</button>
         </div>
 
     </div>
 </section>
 
-<!-- skills -->
+
 <section id="skills">
     <span class="section-sub">Tools & Tech</span>
     <h2>Skills</h2>
     <div class="divider"></div>
-    <div class="skills-grid">
+    <div class="row g-3">
 
-        <div class="skill-card">
-            <h3>Game Development</h3>
-            <div class="skill-item">
-                <div class="skill-name"><span>Unity (C#)</span><span>70%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>Unreal Engine</span><span>75%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>Blueprints</span><span>50%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="50"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>AR Foundations</span><span>35%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="35"></div></div>
+        <div class="col-md-6">
+            <div class="skill-card">
+                <h3>Game Development</h3>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Unity (C#)</span><span>70%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Unreal Engine</span><span>75%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Blueprints</span><span>50%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="50"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>AR Foundations</span><span>35%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="35"></div></div>
+                </div>
             </div>
         </div>
 
-        <div class="skill-card">
-            <h3>Web Development</h3>
-            <div class="skill-item">
-                <div class="skill-name"><span>HTML / CSS</span><span>75%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>JavaScript</span><span>75%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>Node.js</span><span>70%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>MySQL</span><span>65%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <h3>Creative Tools</h3>
-            <div class="skill-item">
-                <div class="skill-name"><span>Photoshop</span><span>80%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>Adobe Animate</span><span>75%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>Game Design</span><span>85%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
-            </div>
-              <div class="skill-item">
-                <div class="skill-name"><span>Canva</span><span>65%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
+        <div class="col-md-6">
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <div class="skill-item">
+                    <div class="skill-name"><span>HTML / CSS</span><span>75%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>JavaScript</span><span>75%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Node.js</span><span>70%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>MySQL</span><span>65%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
+                </div>
             </div>
         </div>
 
-        <div class="skill-card">
-            <h3>Languages</h3>
-            <div class="skill-item">
-                <div class="skill-name"><span>C#</span><span>75%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+        <div class="col-md-6">
+            <div class="skill-card">
+                <h3>Creative Tools</h3>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Photoshop</span><span>80%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Adobe Animate</span><span>75%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Game Design</span><span>85%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Canva</span><span>65%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
+                </div>
             </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>CSS</span><span>65%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-name"><span>Python</span><span>10%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="10"></div></div>
-            </div>
-               <div class="skill-item">
-                <div class="skill-name"><span>Cybersecurity</span><span>30%</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="30"></div></div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="skill-card">
+                <h3>Languages</h3>
+                <div class="skill-item">
+                    <div class="skill-name"><span>C#</span><span>75%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>CSS</span><span>65%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Python</span><span>10%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="10"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Cybersecurity</span><span>30%</span></div>
+                    <div class="bar-track"><div class="bar-fill" data-width="30"></div></div>
+                </div>
             </div>
         </div>
 
     </div>
 </section>
 
-<!-- game -->
+
 <section id="game">
     <span class="section-sub">Play</span>
     <h2>Web Game</h2>
@@ -247,13 +265,13 @@
     </div>
 </section>
 
-<!-- contact -->
+
 <section id="contact">
     <span class="section-sub">Reach Out</span>
     <h2>Contact</h2>
     <div class="divider"></div>
-    <div class="contact-layout">
-        <div class="contact-links">
+    <div class="row g-4">
+        <div class="col-md-4 contact-links">
             <div class="contact-link-item">
                 <span class="label">Email</span>
                 <a href="mailto:Kcaz.dev@gmail.com">Kcaz.dev@gmail.com</a>
@@ -267,13 +285,21 @@
                 <a href="https://www.linkedin.com/in/zackery-lake-b3a41825a/" target="_blank">zackery-lake</a>
             </div>
         </div>
-        <form id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-            <div id="formMessage"></div>
-        </form>
+        <div class="col-md-8">
+ <form id="contactForm">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+    <div id="formMessage"></div>
+</form>
+        </div>
     </div>
 </section>
 
@@ -307,6 +333,11 @@
         this.reset();
     });
 </script>
+<!--Improvement 1: Added defer to the Bootstrap JS script tag to eliminate render-blocking behavior. WebPageTest identified 3 render-blocking requests. After adding defer, the browser no longer waits for Bootstrap JS to load before rendering the page.
+
+
+Improvement 2: Added <label> elements to all contact form inputs to fix a serious accessibility issue flagged by WebPageTest. Labels allow screen readers to identify form fields correctly.
+-->
 
 </body>
 </html>

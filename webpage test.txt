@@ -1,0 +1,4 @@
+Improvement 1 — Render-blocking JS: WebPageTest flagged 3 render-blocking requests. Fixed by adding defer to the Bootstrap script tag so it loads after the page renders.
+
+
+Improvement 2 — Accessibility: WebPageTest flagged 1 serious accessibility issue. Fixed by adding <label> elements to all contact form inputs so screen readers can identify each field.
