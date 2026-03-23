@@ -7,9 +7,9 @@
     <title>Zackery Lake — Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -56,14 +56,22 @@
                 </div>
             </div>
             <div class="col-md-8 about-text">
-                <p>I'm Zackery Lake — a developer at Boise State University majoring in GIMM. I specialize in Unity
-                    (C#), Unreal Engine (C++/Blueprints), and full-stack development with HTML, JavaScript, MySQL and
-                    Node.js. I also have a strong background in digital art and game design, using tools like Photoshop
-                    and Adobe Animate to create original assets and animations.</p>
-                <p>Games shaped my childhood, but instead of stopping at playing them, I wanted to understand how they
-                    were built. That mindset pushed me into development and continues to fuel my work today.</p>
-                <p>My goal is to use my skills to push the world forward — whether through games, tools, or systems that
-                    redefine how people interact with technology.</p>
+                <p>I'm a developer and digital creator at Boise State University, studying Games, Interactive Media, and
+                    Mobile (GIMM) — a discipline that sits at the intersection of technology, design, and storytelling.
+
+                    Games didn't just shape my childhood — they shaped the way I think. Where most people saw
+                    entertainment, I saw systems to understand, mechanics to dissect, and worlds worth rebuilding from
+                    the ground up. That curiosity drove me into development and hasn't let go since.
+
+                    Today I build across the full stack, from immersive 3D environments in Unity and Unreal Engine to
+                    responsive web apps powered by Node.js and MySQL. I pair that engineering foundation with hands-on
+                    digital art skills in Photoshop and Adobe Animate, giving me the rare ability to own both the code
+                    and the creative vision behind a project.</p>
+                    
+                <p>My goal is to use my skills to push the world forward. Whether through games that challenge how we
+                    feel, tools that redefine how we work, or systems that change how people interact with technology
+                    altogether. I'm not interested in building things that blend in. I want to build things that matter.
+                </p>
             </div>
         </div>
     </section>
@@ -375,12 +383,12 @@
             this.reset();
         });
     </script>
-   
-   
-   
-   
-   
-   <!--Improvement 1: Added defer to the Bootstrap JS script tag to eliminate render-blocking behavior. WebPageTest identified 3 render-blocking requests. After adding defer, the browser no longer waits for Bootstrap JS to load before rendering the page.
+
+
+
+
+
+    <!--Improvement 1: Added defer to the Bootstrap JS script tag to eliminate render-blocking behavior. WebPageTest identified 3 render-blocking requests. After adding defer, the browser no longer waits for Bootstrap JS to load before rendering the page.
 
 
 Improvement 2: Added <label> elements to all contact form inputs to fix a serious accessibility issue flagged by WebPageTest. Labels allow screen readers to identify form fields correctly.
