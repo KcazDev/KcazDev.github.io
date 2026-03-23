@@ -362,37 +362,30 @@
         </div>
     </footer>
 
-    <script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    emailjs.init('X0tmvfZM5hMxFLN7I');
 
-        const bars = document.querySelectorAll('.bar-fill');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.width = entry.target.dataset.width + '%';
-                }
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const msg = document.getElementById('formMessage');
+
+        emailjs.sendForm('service_zicst4w', 'template_w4yju9p', this)
+            .then(() => {
+                msg.className = 'success';
+                msg.textContent = 'Message sent! I will get back to you soon.';
+                this.reset();
+            })
+            .catch(() => {
+                msg.className = 'error';
+                msg.textContent = 'Something went wrong. Please email me directly.';
             });
-        }, { threshold: 0.3 });
-
-        bars.forEach(bar => observer.observe(bar));
-
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const msg = document.getElementById('formMessage');
-            msg.className = 'success';
-            msg.textContent = 'Message sent! I will get back to you soon.';
-            this.reset();
-        });
-    </script>
+    });
+</script>
 
 
 
 
-
-    <!--Improvement 1: Added defer to the Bootstrap JS script tag to eliminate render-blocking behavior. WebPageTest identified 3 render-blocking requests. After adding defer, the browser no longer waits for Bootstrap JS to load before rendering the page.
-
-
-Improvement 2: Added <label> elements to all contact form inputs to fix a serious accessibility issue flagged by WebPageTest. Labels allow screen readers to identify form fields correctly.
--->
 
 
 
