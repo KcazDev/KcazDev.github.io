@@ -170,6 +170,35 @@ section h2 {
     align-items: start;
     max-width: 900px;
 }
+.role-badge {
+    display: inline-block;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    padding: 4px 14px;
+    border-radius: 4px;
+    font-size: 0.78em;
+    margin-bottom: 16px;
+}
+
+.contribution-block {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.contribution-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.contribution-block h3 {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--cyan);
+    margin-bottom: 10px;
+}
 
 .profile-photo {
     width: 180px;

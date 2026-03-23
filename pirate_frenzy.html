@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirate Frenzy — Zackery Lake</title>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
+
+    <link rel="stylesheet" href="styles.css" />
+
+
+</head>
+<body>
+
+<div class="project-page">
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <div class="project-hero">
+        <h1>Pirate Frenzy</h1>
+        <div class="role-badge">Team Project</div>
+        <p>An augmented reality mobile game where waves of pirates invade the real world through your phone's camera.
+        Built in Unity with AR Foundations, Pirate Frenzy draws inspiration from the wave-based survival mechanics of
+        Call of Duty: Zombies — transplanted into an AR experience where enemies spawn in your actual physical
+        environment. Players fight back using power-ups and quick reflexes across escalating waves, anywhere they play.</p>
+        <div class="hero-tags">
+            <span class="hero-tag">Unity</span>
+            <span class="hero-tag">C#</span>
+            <span class="hero-tag">AR Foundations</span>
+            <span class="hero-tag">Mobile</span>
+            <span class="hero-tag">Game Design</span>
+            <span class="hero-tag">Photoshop</span>
+            <span class="hero-tag">Adobe Animate</span>
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h2>About the Project</h2>
+        <p>Pirate Frenzy was built as a collaborative team project with the goal of shipping a polished, fun AR mobile
+        game from the ground up. The core inspiration came from Call of Duty: Zombies — specifically its wave-based
+        survival structure, escalating difficulty, and the way power-ups create those clutch moments mid-run. The
+        question we asked: what would that feel like if the enemies were pirates, spawning right in your living room?</p>
+        <p>Using Unity's AR Foundations framework, enemy spawns and gameplay elements are anchored to real-world
+        surfaces detected through the device camera. This gives the game an immersive quality that traditional mobile
+        games can't replicate — players physically move around their space to engage enemies and collect power-ups,
+        making every session feel unique to wherever they're playing.</p>
+    </div>
+
+    <div class="content-card">
+        <h2>My Contributions</h2>
+
+        <div class="contribution-block">
+            <h3>Fruit Power-Up System (C#)</h3>
+            <p>I designed and built the entire fruit power-up system in C#. Power-ups spawn at timed intervals
+            during enemy waves, each fruit granting a different temporary ability — speed boosts, damage multipliers,
+            health regeneration, and kill all enemies. The system manages spawn timing, per-type effect logic, duration timers,
+            and clean teardown when effects expire. The design was directly influenced by CoD Zombies' power-up drops,
+            where grabbing the right item at the right moment can flip a losing run into a comeback.</p>
+        </div>
+
+        <div class="contribution-block">
+            <h3>Main Menu Art & Animation</h3>
+            <p>I created all of the main menu artwork and animation from scratch using Photoshop and Adobe Animate.
+            The goal was to immediately establish the pirate theme and feel polished enough to set the right tone
+            before a player ever taps start. I illustrated the key art, then brought the screen to life with
+            animated elements built and sequenced in Adobe Animate.</p>
+        </div>
+
+    </div>
+
+
+    <div class="content-card">
+        <h2>Power-Up Scripts</h2>
+        <p>C# scripts handling fruit power-up spawn logic, effect application, duration timing, and teardown.</p>
+        <div class="screenshot-gallery">
+            <img src="assets/pf_fruitmanagement_script.png" alt="Power-Up Spawn Script">
+            <img src="assets/pf_powerupspawner_script.png" alt="Power-Up Effect Script">
+            <img src="assets/Piratefrenzy_applescript.png" alt="Power-Up Effect Script">
+            <img src="assets/watermelon_script.png" alt="Power-Up Effect Script">
+            <img src="assets/bannana_script.png" alt="Power-Up Effect Script">
+            <img src="assets/pineapple_script.png" alt="Power-Up Effect Script">
+        </div>
+        <p class="gallery-note">Click any image to expand</p>
+    </div>
+
+    <!--
+    OPTIONAL: Uncomment and add your video path if you have gameplay footage.
+
+    <div class="content-card">
+        <h2>Gameplay Video</h2>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="assets/piratefrenzy_gameplay.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    -->
+
+</div>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">✕</span>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+    const imgs = document.querySelectorAll('.screenshot-gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+        });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+</script>
+
+</body>
+</html>
