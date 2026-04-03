@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Circus — Zackery Lake</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="project-page">
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <div class="project-hero">
+        <h1>Quantum Circus</h1>
+        <div class="role-badge">Team Lead</div>
+        <p>An interactive comic experience designed to make quantum mechanics accessible and exciting for a younger
+        audience. Rather than textbooks and equations, we used the spectacle of a traveling circus — where every act
+        is a different quantum mechanic brought to life. Superposition, entanglement, wave-particle duality — each
+        one becomes a performance under the big top.</p>
+        <div class="hero-tags">
+            <span class="hero-tag">Unity</span>
+            <span class="hero-tag">C#</span>
+            <span class="hero-tag">Interactive Comic</span>
+            <span class="hero-tag">Team Lead</span>
+            <span class="hero-tag">Game Design</span>
+            <span class="hero-tag">Original Art</span>
+            <span class="hero-tag">Photoshop</span>
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h2>About the Project</h2>
+        <p>Quantum Circus was built as a team project with the goal of making quantum mechanics genuinely understandable
+        to a younger audience — without dumbing it down. The core idea was that quantum physics is already strange,
+        unpredictable, and spectacular, so a circus was the perfect setting. Each act in the comic maps directly to a
+        real quantum concept, giving the audience an intuitive way to experience ideas that would otherwise feel
+        completely abstract.</p>
+        <p>As team lead, I was responsible for coordinating the team across art, design, and development — keeping
+        everyone aligned on the vision, managing the scope of each act, and making sure the final product held
+        together as a cohesive experience. Leading this project pushed me to think beyond my individual contributions
+        and focus on how all the pieces fit together.</p>
+    </div>
+
+    <div class="content-card">
+        <h2>The Concept</h2>
+        <p>The circus theme wasn't just aesthetic — it was structural. Every quantum mechanic we wanted to explain
+        became its own circus act, with a character and performance built around it. The Magician demonstrated
+        Schrödinger's Cat — the outcome of the act unknown until the moment of observation. The ringmaster, the
+        Chibi Curator, guided the audience between acts, keeping the tone playful while grounding each performance
+        in real science.</p>
+        <p>The result was a comic where kids could experience quantum weirdness firsthand through interaction, rather
+        than just reading about it. Each act was designed so the mechanic was felt before it was explained — making
+        the science stick in a way that a textbook never could.</p>
+    </div>
+
+    <div class="content-card">
+        <h2>My Contributions</h2>
+
+        <div class="contribution-block">
+            <h3>Team Lead</h3>
+            <p>I led the team across the full production — coordinating art, design, and development, running
+            check-ins, managing the project timeline, and making final calls on creative direction. This was my
+            first time leading a project of this scale and it taught me as much about communication and planning
+            as it did about building.</p>
+        </div>
+
+        <div class="contribution-block">
+            <h3>Chibi Curator — Character Design</h3>
+            <p>I designed and created the Chibi Curator from scratch in Photoshop. The Curator is the guide
+            character who introduces each act and connects the audience to the story. The design needed to feel
+            approachable and fun for a younger audience while still fitting the circus world — I went through
+            several iterations before landing on the final look.</p>
+        </div>
+
+        <div class="contribution-block">
+            <h3>Magician Act — Schrödinger's Cat</h3>
+            <p>I designed the Magician mechanic, which was used to demonstrate Schrödinger's Cat theory. The
+            act was built around the idea that the outcome is unknown until observed — the audience interacts
+            with the performance without knowing the result until the moment of reveal. This gave players a
+            hands-on experience of superposition rather than just a definition.</p>
+        </div>
+
+    </div>
+
+    <div class="content-card">
+        <h2>Artwork</h2>
+        <div class="screenshot-gallery">
+            <img src="assets/Chibi_Curator.png" alt="Chibi Curator Character Design">
+            <img src="assets/QC_blackhole.png" alt="Black Hole Scene">
+            <img src="assets/QC_lightspeed.png" alt="Lightspeed Scene">
+            <img src="assets/QC_Planetside.png" alt="Planetside Scene">
+            <img src="assets/QC_ticket.png" alt="Quantum Circus Ticket">
+            <img src="assets/Slide 1.png" alt="Quantum Circus Ticket">
+
+        </div>
+        <p class="gallery-note">Click any image to expand</p>
+    </div>
+
+    <div class="content-card">
+        <h2>Demo</h2>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="assets/Qc_portfolio_piece.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">✕</span>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+    const imgs = document.querySelectorAll('.screenshot-gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+        });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+</script>
+
+</body>
+</html>
