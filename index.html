@@ -175,46 +175,57 @@
             </div>
 
             <div class="col-md-6">
-    <div class="project-card">
-        <span class="card-icon">🎪</span>
-        <h3>Quantum Circus</h3>
-        <p>An interactive comic teaching quantum mechanics to younger audiences through a circus theme. Led the team as project lead.</p>
-        <div class="tags">
-            <span class="tag">Unity</span>
-            <span class="tag">C#</span>
-            <span class="tag">Team Lead</span>
-        </div>
-        <button onclick="location.href='quantum_circus.html'">View Project →</button>
-    </div>
+                <div class="project-card">
+                    <span class="card-icon">🎪</span>
+                    <h3>Quantum Circus</h3>
+                    <p>An interactive comic teaching quantum mechanics to younger audiences through a circus theme. Led
+                        the team as project lead.</p>
+                    <div class="tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Team Lead</span>
+                    </div>
+                    <button onclick="location.href='quantum_circus.html'">View Project →</button>
+                </div>
+            </div>
 
-    <div class="col-md-6">
-    <div class="project-card">
-        <span class="card-icon">🏛️</span>
-        <h3>Gladiator Rush</h3>
-<p>A wave-based slasher built in Unreal Engine. Fight through escalating waves of enemies as a gladiator using swords, axes, and arena weapons — battling for survival and glory.</p>        <div class="tags">
-            <span class="tag">Unreal Engine</span>
-            <span class="tag">Blueprints</span>
-            <span class="tag">Melee Combat</span>
-            <span class="tag">Wave Survival</span>
-        </div>
-        <button onclick="alert('In Production — Coming Soon!')" style="border-color: var(--muted); color: var(--muted); cursor: default;">In Production →</button>
-    </div>
-</div>
+            <div class="col-md-6">
 
-<div class="col-md-6">
-    <div class="project-card">
-        <span class="card-icon">👁️</span>
-        <h3>Astoria</h3>
-        <p>A third person story-driven horror game built in Unreal Engine. Explore a dark and unsettling world where every choice shapes the narrative and nothing is as it seems.</p>
-        <div class="tags">
-            <span class="tag">Unreal Engine</span>
-            <span class="tag">C++</span>
-            <span class="tag">Horror</span>
-            <span class="tag">Story Driven</span>
-        </div>
-        <button onclick="alert('In Production — Coming Soon!')" style="border-color: var(--muted); color: var(--muted); cursor: default;">In Production →</button>
-    </div>
-</div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <span class="card-icon">🏛️</span>
+                        <h3>Gladiator Rush</h3>
+                        <p>A wave-based slasher built in Unreal Engine. Fight through escalating waves of enemies as a
+                            gladiator using swords, axes, and arena weapons — battling for survival and glory.</p>
+                        <div class="tags">
+                            <span class="tag">Unreal Engine</span>
+                            <span class="tag">Blueprints</span>
+                            <span class="tag">Melee Combat</span>
+                            <span class="tag">Wave Survival</span>
+                        </div>
+                        <button onclick="alert('In Production — Coming Soon!')"
+                            style="border-color: var(--muted); color: var(--muted); cursor: default;">In Production
+                            →</button>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <span class="card-icon">👁️</span>
+                        <h3>Astoria</h3>
+                        <p>A third person story-driven horror game built in Unreal Engine. Explore a dark and unsettling
+                            world where every choice shapes the narrative and nothing is as it seems.</p>
+                        <div class="tags">
+                            <span class="tag">Unreal Engine</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Horror</span>
+                            <span class="tag">Story Driven</span>
+                        </div>
+                        <button onclick="alert('In Production — Coming Soon!')"
+                            style="border-color: var(--muted); color: var(--muted); cursor: default;">In Production
+                            →</button>
+                    </div>
+                </div>
 
     </section>
 
@@ -405,26 +416,26 @@
         </div>
     </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-    emailjs.init('X0tmvfZM5hMxFLN7I');
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('X0tmvfZM5hMxFLN7I');
 
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const msg = document.getElementById('formMessage');
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const msg = document.getElementById('formMessage');
 
-        emailjs.sendForm('service_zicst4w', 'template_w4yju9p', this)
-            .then(() => {
-                msg.className = 'success';
-                msg.textContent = 'Message sent! I will get back to you soon.';
-                this.reset();
-            })
-            .catch(() => {
-                msg.className = 'error';
-                msg.textContent = 'Something went wrong. Please email me directly.';
-            });
-    });
-</script>
+            emailjs.sendForm('service_zicst4w', 'template_w4yju9p', this)
+                .then(() => {
+                    msg.className = 'success';
+                    msg.textContent = 'Message sent! I will get back to you soon.';
+                    this.reset();
+                })
+                .catch(() => {
+                    msg.className = 'error';
+                    msg.textContent = 'Something went wrong. Please email me directly.';
+                });
+        });
+    </script>
 
 
 
