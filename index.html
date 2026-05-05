@@ -363,12 +363,13 @@
 
 
     <section id="game">
-        <span class="section-sub">Play</span>
-        <h2>Web Game</h2>
-        <div class="divider"></div>
-        <div class="game-placeholder">
-            <span class="icon">🕹️</span>
-            <p>A browser game is currently in development using JavaScript and HTML Canvas. Check back soon!</p>
+        <div class="game-embed">
+            <iframe src="games/galaxy-raiders/GalaxyRaiders.html" width="100%" height="900"
+                style="border: none; border-radius: 12px; display: block; background: #000;" title="Galaxy Raiders">
+            </iframe>
+            <p style="text-align: center; margin-top: 12px; color: #888; font-size: 14px;">
+                🎮 Click the game to focus, then use Arrow Keys + Space to play
+            </p>
         </div>
     </section>
 
@@ -418,38 +419,38 @@
         </div>
     </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-    emailjs.init('X0tmvfZM5hMxFLN7I');
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('X0tmvfZM5hMxFLN7I');
 
 
-    const bars = document.querySelectorAll('.bar-fill');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.width = entry.target.dataset.width + '%';
-            }
-        });
-    }, { threshold: 0.3 });
-
-    bars.forEach(bar => observer.observe(bar));
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const msg = document.getElementById('formMessage');
-
-        emailjs.sendForm('service_zicst4w', 'template_w4yju9p', this)
-            .then(() => {
-                msg.className = 'success';
-                msg.textContent = 'Message sent! I will get back to you soon.';
-                this.reset();
-            })
-            .catch(() => {
-                msg.className = 'error';
-                msg.textContent = 'Something went wrong. Please email me directly.';
+        const bars = document.querySelectorAll('.bar-fill');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.width = entry.target.dataset.width + '%';
+                }
             });
-    });
-</script>
+        }, { threshold: 0.3 });
+
+        bars.forEach(bar => observer.observe(bar));
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const msg = document.getElementById('formMessage');
+
+            emailjs.sendForm('service_zicst4w', 'template_w4yju9p', this)
+                .then(() => {
+                    msg.className = 'success';
+                    msg.textContent = 'Message sent! I will get back to you soon.';
+                    this.reset();
+                })
+                .catch(() => {
+                    msg.className = 'error';
+                    msg.textContent = 'Something went wrong. Please email me directly.';
+                });
+        });
+    </script>
 
 
 
