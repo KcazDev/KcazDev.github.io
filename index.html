@@ -48,6 +48,21 @@
         <h2 class="section-heading">A selection of<br><em>things I've built.</em></h2>
         <div class="projects">
           <article class="project feature reveal">
+            <div class="project-visual rag-visual" role="img" aria-label="Illustration of multilingual questions flowing through evidence retrieval to answer generation">
+              <span class="visual-label top-left">MULTILINGUAL / RETRIEVAL AUGMENTED GENERATION</span>
+              <div class="rag-diagram" aria-hidden="true">
+                <div class="rag-node"><small>INPUT</small><strong>¿Cómo? · كيف؟</strong><span>Multilingual questions</span></div>
+                <div class="rag-arrow">↓</div>
+                <div class="rag-node rag-node-focus"><small>RETRIEVE & FILTER</small><strong>BGE-M3 + MMR</strong><span>20 → 12 evidence sentences</span></div>
+                <div class="rag-arrow">↓</div>
+                <div class="rag-node"><small>GENERATE</small><strong>Grounded answers</strong><span>Same language as question</span></div>
+              </div>
+              <span class="visual-label bottom-right">2026 / PORTLAND STATE UNIVERSITY</span>
+            </div>
+            <div class="project-info"><div class="project-meta"><span>AI RESEARCH / NATURAL LANGUAGE PROCESSING</span><span>2026</span></div><h3>Multilingual RAG System</h3><p>Developed during the NSF Virtual REU at Portland State University. Built and evaluated a cross-lingual news question-answering pipeline using BGE-M3 retrieval, evidence deduplication, MMR diversification, and LLM answer generation for Spanish and Arabic questions.</p><p><strong>Research results:</strong> Reduced retrieved evidence from 20 to 12 sentences (40% less context), with comparable answer quality: 75/100 versus 73/100 in manual scoring across 50 questions. Raw Top-20 retrieval recovered both supporting articles in 40/50 questions; filtered Top-12 recovered both in 37/50.</p><div class="chips"><span>Python</span><span>RAG</span><span>BGE-M3</span><span>NLP</span><span>Streamlit</span><span>XRAG</span></div><a class="project-link" href="https://github.com/KcazDev/reu-2026-multilingual-qa" target="_blank" rel="noopener noreferrer">View research & source <span>↗</span></a></div>
+          </article>
+          
+          <article class="project feature reveal">
             <div class="project-visual motion-visual" role="img" aria-label="Abstract motion capture and pose tracking visualization">
               <div class="visual-grid"></div><div class="pose"><i class="head"></i><i class="torso"></i><i class="arm arm-left"></i><i class="arm arm-right"></i><i class="leg leg-left"></i><i class="leg leg-right"></i><i class="joint j1"></i><i class="joint j2"></i><i class="joint j3"></i><i class="joint j4"></i></div>
               <span class="visual-label top-left">MOTION / CLASSIFICATION</span><span class="visual-label bottom-right">01 — FEATURED</span>
