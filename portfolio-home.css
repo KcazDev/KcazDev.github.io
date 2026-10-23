@@ -27,3 +27,58 @@
 .paper-actions .text-link{color:#d9e3f4}
 .paper-actions .text-link:hover{color:#82a8ff}
 @media(max-width:760px){.paper-feature{margin-top:45px}.paper-heading{flex-direction:column;gap:8px}.paper-stats{gap:22px}.paper-stats strong{font-size:1.9rem}.paper-actions{gap:22px}}
+
+
+/* OCT 2026 — Option 2: plum / acid lime / lilac. Live-site color refresh only. */
+:root{--blue:#c1ed42;--dark:#18131f;--ink:#201729;--muted:#73677d;--light:#f5f2f7;--pale:#ece5f1;--line:#dcd1e2}
+body{background:var(--light);color:var(--ink)}
+.nav{background:rgba(245,242,247,.96);border-color:#dcd1e2}
+.brand-dot,.blue,.blue-text,.expertise-index{color:#70469a}
+.nav-contact{background:#302239;color:#fff}.nav-contact:hover{background:#614580}
+.nav-links>a:not(.nav-contact):hover,.text-link:hover,.about-links a:hover{color:#75429d}
+.hero{background:linear-gradient(128deg,#f5f2f7 20%,#e9deef 100%)}
+.hero .eyebrow,.eyebrow{color:#715585}
+.hero-lead,.about-right>p:not(.large-paragraph),.contact-section>div>p:not(.eyebrow){color:#63566e}
+.status-dot{background:#a4d12d;box-shadow:0 0 0 5px #c1ed4233}
+.primary{background:#302239;color:#f8f6f9}.primary:hover{background:#513760}
+.hero-art .orb-one{background:radial-gradient(circle at 29% 30%,#f2e6ff 0%,#bf9ed7 24%,#825ca0 49%,#38204c 74%,#1a1025 100%);box-shadow:22px 35px 80px #68378c33}
+.hero-art .orb-two{background:radial-gradient(circle at 31% 28%,#fff,#dff4a1 25%,#b1d83e 57%,#456020)}
+.wireline{border-color:#a17abb}.tiny-mark{background:#9ac52d}
+.hero-bottom{border-color:#d6c8df;color:#786c80}
+.work-section{background:linear-gradient(150deg,#201628,#18131f 75%);color:#f6eff9}
+.work-section .section-heading em,.research-section .section-heading em{color:#c1ed42}
+.section-top .accent,.accent{color:#c1ed42}
+.project.feature{background:#302239}
+.motion-visual{background:radial-gradient(circle at 55% 40%,#5f3d77,#24172f 55%,#180f22)}
+.visual-grid{background-image:linear-gradient(#d9b7f718 1px,transparent 1px),linear-gradient(90deg,#d9b7f718 1px,transparent 1px)}
+.pose{filter:drop-shadow(0 0 15px #ddbbf5)}.pose i{background:#bba2dc}.pose .head{border-color:#e2cef3}.pose .joint{background:#c1ed42}
+.vision-visual{background:radial-gradient(circle,#624a75,#24172f 70%)}
+.viewfinder{border-color:#a78cc7;box-shadow:0 0 0 20px #b59ad908,0 0 0 41px #b59ad908}
+.viewfinder:before,.viewfinder:after{background:#c1ed42}
+.tracking-point{background:#c1ed42;border-color:#62512c;box-shadow:0 0 15px #c1ed42}
+.scanline{background:#c1ed42;box-shadow:0 0 16px #c1ed42}
+.logistics-visual{background:linear-gradient(135deg,#291d36,#624478)}
+.shelf i{background:linear-gradient(135deg,#9c71b0,#3b2b48);border-color:#bc9ccf;box-shadow:9px 9px 0 #1a1025}
+.shelf i:nth-child(3n+2){background:linear-gradient(135deg,#d0ef8e,#637b32)}
+.project-meta{color:#c1adc9}.project p,.research-copy>p:not(.large-paragraph){color:#d7cbdb}
+.chips span{border-color:#756182;color:#e8dbea}
+.project-link{border-color:#c1ed42}.project-link:hover,.archive-links a:hover{color:#c1ed42}
+.archive-links{border-color:#65516d}
+.about-section{background:#f5f2f7}.about-right .large-paragraph{color:#302239}
+.expertise-section{background:#e9e1ee}
+.expertise-item{border-color:#c7b8d0}.expertise-item p{color:#685a70}
+.research-section{background:linear-gradient(135deg,#18131f,#352440 88%);color:#f7f3f8}
+.paper-feature{border-color:#65526d}.paper-heading{color:#c1ed42}
+.paper-author,.paper-summary,.paper-stats span{color:#d6c8dc}
+.paper-stats strong{color:#c1ed42}.paper-actions .text-link{color:#f5ecf8}.paper-actions .text-link:hover{color:#c1ed42}
+.contact-section{background:#f5f2f7}.contact-heading{color:#24172e}
+.contact-email{border-color:#9bc82d}.contact-email:hover{color:#71449c}
+.footer-line{border-color:#d8cbdc}
+.rag-visual{background:radial-gradient(circle at 50% 38%,#55366b,#2b1b37 58%,#170f20)}
+.rag-node{border-color:#a88abf;background:#2c1c3ddd}
+.rag-node small{color:#c1ed42}.rag-node span{color:#d8c8e5}
+.rag-node-focus{border-color:#c1ed42;background:#563a68;box-shadow:0 0 45px #c1ed4233}
+.rag-arrow{color:#c1ed42}
+.visual-label{color:#e4d1ef}
+::selection{background:#c1ed42;color:#18131f}
+@media(max-width:760px){.nav-links{background:#f5f2f7}.menu-toggle span{background:#302239}}
