@@ -27,3 +27,24 @@
 .work-section{background:#202228}.project.feature,.project-pair:not(.secondary-work)>.project,.paper-feature{background:#30343b;border-color:#52545d}.project-visual,.rag-visual,.motion-visual,.vision-visual,.logistics-visual{background:linear-gradient(145deg,#363941,#4c4653)}.rag-node{background:#292c33;border-color:#82718b}.rag-node-focus{background:#4b4051;border-color:#b28bc4}.section-heading em{color:#c6b2d2}.project-meta,.paper-heading{color:#cfb6dd}.chips span{border-color:#77737f}.archive-links{border-color:#5e5b64}
 .about-section,.expertise-section,.contact-section{background:#f5f3f6;color:#24262c}.expertise-section{background:#e8e8eb}.expertise-item{border-color:#b9b7be}.expertise-item p,.about-right>p:not(.large-paragraph){color:#5c5c65}.research-section{background:#22242a}.paper-stats strong{color:#d1b5dd}
 .contact-email{border-bottom-color:#8f5aa8}.paper-actions .primary{background:#8f5aa8;color:#fff}.project-link{color:#d0b3de;border-bottom-color:#a985bb}.project-link:hover{color:#f5e8ff}
+
+/* Connected sensor application project illustration */
+.iot-visual{display:flex;align-items:center;justify-content:center;gap:14px;max-width:100%;padding:32px 14px;color:#f5f3f6}
+.iot-device,.iot-cloud{min-width:118px;border:1px solid #a88cb5;background:#292c33;padding:18px 12px;text-align:center;font-size:.62rem;line-height:1.7;letter-spacing:.09em}
+.iot-device strong,.iot-cloud strong{font-size:1rem;font-weight:800;letter-spacing:0;color:#d7b9e4}
+.iot-cloud{background:#51465b}
+.iot-transfer{font-size:1.1rem;letter-spacing:.04em;color:#ceb0db;white-space:nowrap}
+@media(max-width:420px){.iot-visual{gap:6px}.iot-device,.iot-cloud{min-width:96px;padding:13px 7px}.iot-transfer{font-size:.85rem}}
+
+/* Keep the remaining project card balanced until another completed project is added. */
+.project-pair.single-project{grid-template-columns:minmax(0,1fr)}
+.project-pair.single-project>.project{max-width:850px;width:100%}
+
+/* Hunter System concept preview — replace with actual app screenshots when available. */
+.hunter-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:320px;background:radial-gradient(circle at 55% 40%,#51415b 0%,#30343b 55%,#202127 100%)}
+.hunter-phone{position:relative;width:175px;min-height:270px;padding:17px 13px 12px;background:#13141a;border:4px solid #57515f;border-radius:20px;box-shadow:0 16px 36px #0008,0 0 45px #8f5aa83d;color:#f5f3f6;font-family:monospace}
+.hunter-phone-top{font-size:9px;letter-spacing:1px;display:flex;justify-content:space-between;color:#d4b2e7;border-bottom:1px solid #51465b;padding-bottom:9px}
+.hunter-rank{display:flex;align-items:center;justify-content:space-between;margin:17px 0;font-size:10px;color:#bfc0c8}.hunter-rank strong{color:#dfc0ef;font-size:26px}
+.hunter-level{display:flex;justify-content:space-between;font-size:8px;color:#c8c4d0}.hunter-xp{height:5px;margin:7px 0 20px;background:#40404a;border-radius:6px;overflow:hidden}.hunter-xp i{display:block;width:27%;height:100%;background:#9a6ab1}
+.hunter-quest{padding:9px 7px;margin-top:7px;background:#282830;border:1px solid #51465b;font-size:9px;display:flex;justify-content:space-between}.hunter-tabs{font-size:7px;margin-top:19px;text-align:center;color:#b0a5b8}
+@media(max-width:420px){.hunter-visual{min-height:290px}}
