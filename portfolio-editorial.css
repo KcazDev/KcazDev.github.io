@@ -27,3 +27,11 @@
 .work-section{background:#202228}.project.feature,.project-pair:not(.secondary-work)>.project,.paper-feature{background:#30343b;border-color:#52545d}.project-visual,.rag-visual,.motion-visual,.vision-visual,.logistics-visual{background:linear-gradient(145deg,#363941,#4c4653)}.rag-node{background:#292c33;border-color:#82718b}.rag-node-focus{background:#4b4051;border-color:#b28bc4}.section-heading em{color:#c6b2d2}.project-meta,.paper-heading{color:#cfb6dd}.chips span{border-color:#77737f}.archive-links{border-color:#5e5b64}
 .about-section,.expertise-section,.contact-section{background:#f5f3f6;color:#24262c}.expertise-section{background:#e8e8eb}.expertise-item{border-color:#b9b7be}.expertise-item p,.about-right>p:not(.large-paragraph){color:#5c5c65}.research-section{background:#22242a}.paper-stats strong{color:#d1b5dd}
 .contact-email{border-bottom-color:#8f5aa8}.paper-actions .primary{background:#8f5aa8;color:#fff}.project-link{color:#d0b3de;border-bottom-color:#a985bb}.project-link:hover{color:#f5e8ff}
+
+/* Connected sensor application project illustration */
+.iot-visual{display:flex;align-items:center;justify-content:center;gap:14px;max-width:100%;padding:32px 14px;color:#f5f3f6}
+.iot-device,.iot-cloud{min-width:118px;border:1px solid #a88cb5;background:#292c33;padding:18px 12px;text-align:center;font-size:.62rem;line-height:1.7;letter-spacing:.09em}
+.iot-device strong,.iot-cloud strong{font-size:1rem;font-weight:800;letter-spacing:0;color:#d7b9e4}
+.iot-cloud{background:#51465b}
+.iot-transfer{font-size:1.1rem;letter-spacing:.04em;color:#ceb0db;white-space:nowrap}
+@media(max-width:420px){.iot-visual{gap:6px}.iot-device,.iot-cloud{min-width:96px;padding:13px 7px}.iot-transfer{font-size:.85rem}}
