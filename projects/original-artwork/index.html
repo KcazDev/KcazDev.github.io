@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original Artwork — Zackery Lake</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+<div class="project-page">
+
+    <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+
+    <div class="project-hero">
+        <h1>Original Artwork</h1>
+        <p>A collection of original digital art created across multiple projects using Photoshop and Adobe Animate.
+        From character design and game UI screens to concept sketches and illustrations — each piece was created
+        from scratch as part of a larger project or as a standalone exercise.</p>
+        <div class="hero-tags">
+            <span class="hero-tag">Photoshop</span>
+            <span class="hero-tag">Adobe Animate</span>
+            <span class="hero-tag">Character Design</span>
+            <span class="hero-tag">Game UI</span>
+            <span class="hero-tag">Concept Art</span>
+            <span class="hero-tag">Digital Illustration</span>
+        </div>
+    </div>
+
+
+    <div class="content-card">
+        <h2>Quantum Circus</h2>
+        <p>Original artwork created for the Quantum Circus interactive comic project. The Chibi Curator was
+        designed as the guide character leading the audience through quantum mechanics concepts. The remaining
+        pieces are background environments and scene illustrations built around the circus theme.</p>
+        <div class="screenshot-gallery" style="margin-top: 20px;">
+            <img src="../../assets/images/shared/chibi-curator.png" alt="Chibi Curator Character">
+            <img src="../../assets/images/shared/qc-blackhole.png" alt="QC Black Hole">
+            <img src="../../assets/images/shared/qc-lightspeed.png" alt="QC Lightspeed">
+            <img src="../../assets/images/shared/qc-planetside.png" alt="QC Planetside">
+            <img src="../../assets/images/shared/qc-ticket.png" alt="QC Circus Ticket">
+        </div>
+        <p class="gallery-note">Click any image to expand</p>
+    </div>
+
+
+    <div class="content-card">
+        <h2>Knights Adventure</h2>
+        <p>All assets for Knights Adventure were created entirely from scratch. This includes the game's UI screens
+        and promotional trailer artwork. Every visual element in the game was original work.</p>
+        <div class="screenshot-gallery" style="margin-top: 20px;">
+            <img src="../../assets/images/original-artwork/death-screen.png" alt="Death Screen">
+            <img src="../../assets/images/original-artwork/win-screen.png" alt="Win Screen">
+        </div>
+        <p class="gallery-note">Click any image to expand</p>
+    </div>
+
+
+    <div class="content-card">
+        <h2>Pirate Frenzy</h2>
+        <p>Original menu artwork created for the Pirate Frenzy AR mobile game. The menu design sets the tone
+        for the pirate theme of the game.</p>
+        <div class="screenshot-gallery" style="margin-top: 20px;">
+            <img src="../../assets/images/original-artwork/piratefrenzy-menu.png" alt="Pirate Frenzy Menu">
+        </div>
+        <p class="gallery-note">Click to expand</p>
+    </div>
+
+
+    <div class="content-card">
+        <h2>Standalone Work</h2>
+        <p>Individual pieces created outside of project work — including foundational exercises, personal
+        illustrations, and logo design.</p>
+        <div class="screenshot-gallery" style="margin-top: 20px;">
+            <img src="../../assets/images/original-artwork/skeleton-drawing.png" alt="Skeleton Drawing">
+            <img src="../../assets/images/original-artwork/pixel-heart.png" alt="Pixel Heart">
+            <img src="../../assets/images/original-artwork/logo-artwork.png" alt="Logo Artwork">
+            <img src="../../assets/images/original-artwork/persepctive-drawing.png" alt="Perspective Drawing Exercise">
+        </div>
+        <p class="gallery-note">Click any image to expand</p>
+    </div>
+
+    <div class="content-card">
+        <h2>More Coming Soon</h2>
+        <p>This gallery will continue to grow as more projects are completed. Check back for additional
+        character designs, animations, and concept art.</p>
+    </div>
+
+</div>
+
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">✕</span>
+    <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+    const imgs = document.querySelectorAll('.screenshot-gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+        });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+</script>
+
+</body>
+</html>
