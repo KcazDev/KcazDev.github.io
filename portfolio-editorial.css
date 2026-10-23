@@ -35,3 +35,7 @@
 .iot-cloud{background:#51465b}
 .iot-transfer{font-size:1.1rem;letter-spacing:.04em;color:#ceb0db;white-space:nowrap}
 @media(max-width:420px){.iot-visual{gap:6px}.iot-device,.iot-cloud{min-width:96px;padding:13px 7px}.iot-transfer{font-size:.85rem}}
+
+/* Keep the remaining project card balanced until another completed project is added. */
+.project-pair.single-project{grid-template-columns:minmax(0,1fr)}
+.project-pair.single-project>.project{max-width:850px;width:100%}
